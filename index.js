@@ -4,8 +4,9 @@ const app = express();
 app.set("view engine", "ejs")
 
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`listening at ${PORT}`));
+const PORT = process.env.PORT || 3000;
+const IP = process.env.IP
+app.listen(PORT, IP, () => console.log(`listening at ${IP}:${PORT}`));
 
 
 
